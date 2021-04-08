@@ -24,33 +24,41 @@ double numberCube(double);
 void welcomeMessage();
 void dayOfTheWeek(int);
 
-
 int main()
 {
+  
     int dayMain = 0;
     double number = 0.0;
     double result = 0.0;
+    char exit = '\0';
 
     cout << fixed << setprecision(4); 
 
-    welcomeMessage(); // Function Call
-    //function calls (true = "yes", false="no")
-    cout << "\nLittle Sister Function calls: ";
-    cout << "\nOption 1, Little Sister Earns: $" << MakeBank(true,false);
-    cout << "\nOption 2, Little Sister Earns: $" << MakeBank(false,true);
-    cout << "\nOption 3, Little Sister Earns: $" << MakeBank(true,true);
-    cout << "\nOption 4, Little Sister Earns: $" <<  MakeBank(false,false);
+    do
+    {
+      welcomeMessage(); // Function Call
+      //function calls (true = "yes", false="no")
+      cout << "\nLittle Sister Function calls: ";
+      cout << "\nOption 1, Little Sister Earns: $" << MakeBank(true,false);
+      cout << "\nOption 2, Little Sister Earns: $" << MakeBank(false,true);
+      cout << "\nOption 3, Little Sister Earns: $" << MakeBank(true,true);
+      cout << "\nOption 4, Little Sister Earns: $" <<  MakeBank(false,false);
 
-    cout << "\n\nEnter a day of the week (1-7): ";
-    dayMain = validateInt(dayMain);
-    //cin >> dayMain;
-    dayOfTheWeek(dayMain);
+      cout << "\n\nEnter a day of the week (1-7): ";
+      dayMain = validateInt(dayMain);
+      //cin >> dayMain;
+      dayOfTheWeek(dayMain);
 
-    cout << "\nPlease enter a number, I will cube it: ";
-    number = validateDouble(number);
-    result = numberCube(number); // Function call store result in variable
-    cout << "\nThe cube of " << number << " is " << result << endl;
-  
+      cout << "\nPlease enter a number, I will cube it: ";
+      number = validateDouble(number);
+      result = numberCube(number); // Function call store result in variable
+      cout << "\nThe cube of " << number << " is " << result << endl;
+
+      cout << "\nE or e to exit, any key to continue: ";
+      exit = validateChar(exit);
+
+      system("clear"); // Clear the screen
+    } while(exit != 'e' && exit != 'E'); // E or e will exit, but && for De Morgan's law
     /*Programming Challenges
       *** 1. Extend this program to output how much Little Sister earns in each scenario.
       *** 2. Create a void welcomeMessage(); function to show a nice greeting on screen to the program.
@@ -58,9 +66,9 @@ int main()
       *** 4. Output each day of the week in a different color.
       *** 5. Extend this program create a function double numberCube(double); to output the cube of the number passed.
       *** 6. Extend this program set the precision of the numberCube result to 4 decimal places
-      7. Loop the program until exit conditions 'E' AND 'e', clear the screen upon each loop #include<cstdlib> system("cls");
+      *** 7. Loop the program until exit conditions 'E' AND 'e', clear the screen upon each loop #include<cstdlib> system("cls");
       *** 8. Add input validation with Dr_T's .h file
-      9. Add a class to this program
+      9. Add a class to this program - (Next live class session).
     */
     return 0;
 }
