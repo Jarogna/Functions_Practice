@@ -14,6 +14,7 @@ function prototypes, function definition, and functions calls to make the progra
 This completed work shall be uploaded to Extra Credit item 15: Little_Sister_YourLastName.zip
 */
 #include<iostream>
+#include<iomanip> // For setting precision
 #include "Input_Validation_Extended.h"
 using namespace std;
 
@@ -29,6 +30,8 @@ int main()
     int dayMain = 0;
     double number = 0.0;
     double result = 0.0;
+
+    cout << fixed << setprecision(4); 
 
     welcomeMessage(); // Function Call
     //function calls (true = "yes", false="no")
@@ -54,7 +57,7 @@ int main()
       *** 3. Extend this program to write a void dayOfTheWeek(int); function given user input of the number (1 output Sunday);
       *** 4. Output each day of the week in a different color.
       *** 5. Extend this program create a function double numberCube(double); to output the cube of the number passed.
-      6. Extend this program set the precision of the numberCube result to 4 decimal places
+      *** 6. Extend this program set the precision of the numberCube result to 4 decimal places
       7. Loop the program until exit conditions 'E' AND 'e', clear the screen upon each loop #include<cstdlib> system("cls");
       *** 8. Add input validation with Dr_T's .h file
       9. Add a class to this program
