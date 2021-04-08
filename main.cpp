@@ -14,6 +14,7 @@ function prototypes, function definition, and functions calls to make the progra
 This completed work shall be uploaded to Extra Credit item 15: Little_Sister_YourLastName.zip
 */
 #include<iostream>
+#include "Input_Validation_Extended.h"
 using namespace std;
 
 //$_earned       mom  dad
@@ -35,7 +36,8 @@ int main()
     cout << "\nOption 4, Little Sister Earns: $" <<  MakeBank(false,false);
 
     cout << "\n\nEnter a day of the week (1-7): ";
-    cin >> dayMain;
+    dayMain = validateInt(dayMain);
+    //cin >> dayMain;
     dayOfTheWeek(dayMain);
   
     /*Programming Challenges
@@ -46,7 +48,7 @@ int main()
       5. Extend this program create a function double numberCube(double); to output the cube of the number passed.
       6. Extend this program set the precision of the numberCube result to 4 decimal places
       7. Loop the program until exit conditions 'E' AND 'e', clear the screen upon each loop #include<cstdlib> system("cls");
-      8. Add input validation with Dr_T's .h file
+      *** 8. Add input validation with Dr_T's .h file
       9. Add a class to this program
     */
     return 0;
