@@ -42,7 +42,7 @@ int main()
       *** 1. Extend this program to output how much Little Sister earns in each scenario.
       *** 2. Create a void welcomeMessage(); function to show a nice greeting on screen to the program.
       *** 3. Extend this program to write a void dayOfTheWeek(int); function given user input of the number (1 output Sunday);
-      4. Output each day of the week in a different color.
+      *** 4. Output each day of the week in a different color.
       5. Extend this program create a function double numberCube(double); to output the cube of the number passed.
       6. Extend this program set the precision of the numberCube result to 4 decimal places
       7. Loop the program until exit conditions 'E' AND 'e', clear the screen upon each loop #include<cstdlib> system("cls");
@@ -87,33 +87,43 @@ void welcomeMessage()
 
 void dayOfTheWeek(int day)
 {
+  string color;
+  string reset = "\x1b[0m";
+
   if(day == 1)
   {
-    cout << "\nIt's Sunday" << endl;
+    color = "\x1b[" + to_string(32) + ";1m";
+    cout << color << "\nIt's Sunday" << reset << endl;
   }
   else if(day == 2)
   {
-    cout << "\nIt's Monday" << endl;
+    color = "\x1b[" + to_string(33) + ";1m";
+    cout << color << "\nIt's Monday" << reset << endl;
   }
   else if(day == 3)
   {
-    cout << "\nIt's Tuesday" << endl;
+    color = "\x1b[" + to_string(34) + ";1m";
+    cout << color << "\nIt's Tuesday" << reset << endl;
   }
   else if(day == 4)
   {
-    cout << "\nIt's Wednesday" << endl;
+    color = "\x1b[" + to_string(37) + ";1m";
+    cout << color << "\nIt's Wednesday" << reset << endl;
   }
   else if(day == 5)
   {
-    cout << "\nIt's Thursday" << endl;
+    color = "\x1b[" + to_string(36) + ";1m";
+    cout << color << "\nIt's Thursday" << reset << endl;
   }
   else if(day == 6)
   {
-    cout << "\nIt's Friday" << endl;
+    color = "\x1b[" + to_string(35) + ";1m";
+    cout << color << "\nIt's Friday" << reset << endl;
   }
   else if(day == 7)
   {
-    cout << "\nIt's Saturday" << endl;
+    color = "\x1b[" + to_string(34) + ";1m";
+    cout << color << "\nIt's Saturday" << reset << endl;
   }
   else // Default clause
   {
