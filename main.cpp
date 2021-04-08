@@ -18,9 +18,11 @@ using namespace std;
 
 //$_earned       mom  dad
 double MakeBank(bool,bool); //function prototype
+void welcomeMessage();
 
 int main()
 {
+    welcomeMessage(); // Function Call
     //function calls (true = "yes", false="no")
     cout << "\nLittle Sister Function calls: ";
     cout << "\nOption 1, Little Sister Earns: $" << MakeBank(true,false);
@@ -29,7 +31,7 @@ int main()
     cout << "\nOption 4, Little Sister Earns: $" <<  MakeBank(false,false);
 
     /*Programming Challenges
-      1. Extend this program to output how much Little Sister earns in each scenario.
+      *** 1. Extend this program to output how much Little Sister earns in each scenario.
       2. Create a void welcomeMessage(); function to show a nice greeting on screen to the program.
       3. Extend this program to write a void dayOfTheWeek(int); function given user input of the number (1 output Sunday);
       4. Output each day of the week in a different color.
@@ -50,7 +52,7 @@ double MakeBank(bool mom, bool dad)
     }
   if (mom == false )
     {
-      cout << "\n\tAin't - mom";
+      // cout << "\n\tAin't - mom";
     }
   if (dad == true) 
     {
@@ -58,8 +60,17 @@ double MakeBank(bool mom, bool dad)
     }
   if (dad == false)
     {
-      cout << "\n\tGet a Job";
+      // cout << "\n\tGet a Job - Dad";
     }
 
 	return amtEarned;
+}
+
+void welcomeMessage()
+{
+  cout << "\nGimme dat GUAP!" << endl;
+  for(int i=0; i < 15; i++)
+  {
+    cout << "*";
+  }
 }
