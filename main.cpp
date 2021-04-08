@@ -53,7 +53,7 @@ int main()
       *** 2. Create a void welcomeMessage(); function to show a nice greeting on screen to the program.
       *** 3. Extend this program to write a void dayOfTheWeek(int); function given user input of the number (1 output Sunday);
       *** 4. Output each day of the week in a different color.
-      5. Extend this program create a function double numberCube(double); to output the cube of the number passed.
+      *** 5. Extend this program create a function double numberCube(double); to output the cube of the number passed.
       6. Extend this program set the precision of the numberCube result to 4 decimal places
       7. Loop the program until exit conditions 'E' AND 'e', clear the screen upon each loop #include<cstdlib> system("cls");
       *** 8. Add input validation with Dr_T's .h file
