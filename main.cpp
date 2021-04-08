@@ -19,6 +19,7 @@ using namespace std;
 
 //$_earned       mom  dad
 double MakeBank(bool,bool); //function prototype
+double numberCube(double);
 void welcomeMessage();
 void dayOfTheWeek(int);
 
@@ -26,6 +27,8 @@ void dayOfTheWeek(int);
 int main()
 {
     int dayMain = 0;
+    double number = 0.0;
+    double result = 0.0;
 
     welcomeMessage(); // Function Call
     //function calls (true = "yes", false="no")
@@ -39,6 +42,11 @@ int main()
     dayMain = validateInt(dayMain);
     //cin >> dayMain;
     dayOfTheWeek(dayMain);
+
+    cout << "\nPlease enter a number, I will cube it: ";
+    number = validateDouble(number);
+    result = numberCube(number); // Function call store result in variable
+    cout << "\nThe cube of " << number << " is " << result << endl;
   
     /*Programming Challenges
       *** 1. Extend this program to output how much Little Sister earns in each scenario.
@@ -131,4 +139,9 @@ void dayOfTheWeek(int day)
   {
     cout << "\nError: Invalid input" << endl;
   }     
+}
+
+double numberCube(double x)
+{
+  return (x * x * x);
 }
